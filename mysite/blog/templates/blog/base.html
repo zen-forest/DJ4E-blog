@@ -1,0 +1,21 @@
+<!-- tells Django to load static template tags -->
+{% load static  %}
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static "css/blog.css" %}">
+  </head>
+  <body>
+    <div id="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+    <div id="sidebar">
+      <h2>My Blog</h2>
+      <p>Welcome to the Tim blog</p>
+    </div>
+  </body>
+</html>

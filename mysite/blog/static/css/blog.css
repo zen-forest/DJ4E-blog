@@ -8,7 +8,7 @@ html {
 }
 
 @font-face {
-  font-family: 'Inter-H1';
+  font-family: 'Bold';
   src: url('/static/fonts/Inter-Bold.ttf') format('truetype');
 }
 
@@ -20,10 +20,17 @@ a {
   color: black;
 }
 
-
+H2 {
+  font-family: 'Bold', sans-serif;
+  font-weight: Bold;
+}
 
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 50%; /* or any specific width */
+  width: 600px; /* or any specific width */
+}
+
+.date {
+  color: #737373;
 }

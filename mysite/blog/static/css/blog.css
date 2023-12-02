@@ -1,0 +1,29 @@
+html {
+  font-family: Inter;
+}
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('/static/fonts/Inter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter-H1';
+  src: url('/static/fonts/Inter-Bold.ttf') format('truetype');
+}
+
+body {
+  font-family: 'MyCustomFont', sans-serif;
+}
+
+a {
+  color: black;
+}
+
+
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; /* or any specific width */
+}

@@ -9,13 +9,16 @@
     <link rel="stylesheet" href="{% static "css/blog.css" %}">
   </head>
   <body>
-    <div id="content">
-      {% block content %}
-      {% endblock %}
-    </div>
-    <div id="sidebar">
-      <h2>My Blog</h2>
-      <p>Welcome to the Tim blog</p>
-    </div>
+    <div class="container">
+      <div id="sidebar">
+        <h2>Tim Collins</h2>
+        <p>A place for notes, learnings, and more</p>
+      </div>
+
+      <div id="content">
+        {% block content %}
+        {% endblock %}
+      </div>
+  </div>
   </body>
 </html>

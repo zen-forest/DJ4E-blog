@@ -37,7 +37,7 @@ class PostListView(ListView):
    # custom QuerySet instead of retrieving all objects
    queryset = Post.published.all()
    context_object_name = 'posts'
-   paginate_by = 3
+   paginate_by = 4
    template_name = 'blog/post/list.html'
 
 def post_share(request, post_id):

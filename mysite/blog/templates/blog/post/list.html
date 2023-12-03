@@ -4,6 +4,7 @@
 
 {% block content %}
   {% for post in posts %}
+  <div class="post-item">
   <h2>
     <a href="{{ post.get_absolute_url }}">
       {{ post.title }}
@@ -13,7 +14,8 @@
       Published {{ post.publish }} by {{ post.author }}
     </p>
     {{ post.body|truncatewords:36|linebreaks }}
-  {% endfor %}
+  </div>
+    {% endfor %}
   {% include "pagination.html" with page=page_obj %}
 {% endblock %}
   

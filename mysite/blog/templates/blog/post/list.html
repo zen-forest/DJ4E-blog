@@ -3,6 +3,12 @@
 {% block title %}My Blog{% endblock %}
 
 {% block content %}
+
+  <h1>My blog</h1>
+  {% if tag %}
+    <h2>Posts tagged with: "{{ tag.name }}"</h2>
+  {% endif %}
+
   {% for post in posts %}
   <div class="post-item">
   <h2>
@@ -10,12 +16,13 @@
       {{ post.title }}
     </a>
   </h2>
+    <p class="tags">Tags: {{ post.tags.all | join:", "}}</p>
     <p class="date">
       Published {{ post.publish }} by {{ post.author }}
     </p>
     {{ post.body|truncatewords:36|linebreaks }}
   </div>
     {% endfor %}
-  {% include "pagination.html" with page=page_obj %}
+  {% include "pagination.html" with page=posts %}
 {% endblock %}
   
